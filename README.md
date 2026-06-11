@@ -1,53 +1,104 @@
-# Portfólio Emanuel Eduardo
+# Portfólio 
 
-Portfólio profissional desenvolvido com Laravel para apresentar minha experiência,
-habilidades técnicas, formação acadêmica, certificados e formas de contato.
+Este é o repositório do meu portfólio profissional, desenvolvido em Laravel.
 
-O projeto foi construído como uma aplicação web responsiva, com conteúdo organizado
-pelo backend do Laravel e uma interface personalizada com Blade, CSS e JavaScript.
+A aplicação foi construída como uma página única e responsiva. O conteúdo é
+organizado pelo backend e renderizado com Blade, enquanto a interface utiliza CSS
+personalizado e JavaScript para as interações e animações.
 
-## Tecnologias utilizadas
+O projeto está publicado em:
 
-### Backend
+[portfolio-emanuel.alwaysdata.net](https://portfolio-emanuel.alwaysdata.net)
 
-- **PHP 8.3+**: linguagem principal da aplicação.
-- **Laravel 13**: framework responsável por rotas, controller, configurações e
-  renderização da página.
-- **Blade**: template engine utilizada para gerar o HTML e exibir os dados do
-  portfólio.
-- **Composer**: gerenciamento das dependências PHP e execução dos scripts do projeto.
+## Tecnologias
 
-### Frontend
+- **PHP 8.3+**
+- **Laravel 13**
+- **Blade**
+- **HTML5**
+- **CSS3**
+- **Tailwind CSS 4**
+- **JavaScript**
+- **Vite 8**
+- **Composer**
 
-- **HTML5**: estrutura semântica do conteúdo.
-- **CSS3**: identidade visual, responsividade, animações e componentes personalizados.
-- **Tailwind CSS 4**: processamento e suporte à construção dos estilos.
-- **JavaScript**: menu responsivo, comportamento do cabeçalho e animações de entrada
-  com `IntersectionObserver`.
-- **Vite 8**: compilação e otimização dos arquivos CSS e JavaScript.
+## Estrutura técnica
 
-### Qualidade e desenvolvimento
+O projeto utiliza a estrutura MVC do Laravel para separar a entrada da aplicação,
+o processamento da requisição e a apresentação do conteúdo.
 
-- **PHPUnit**: testes unitários e testes de funcionalidade.
-- **Laravel Pint**: padronização e formatação do código PHP.
-- **PHPStan com Larastan**: análise estática do código Laravel.
-- **Git e GitHub**: versionamento e armazenamento do projeto.
+### Roteamento
 
-## Funcionalidades
+A rota principal está definida em `routes/web.php`. Quando uma requisição `GET` é
+feita para `/`, o Laravel direciona o processamento para o
+`PortfolioController`.
 
-- Apresentação profissional e resumo da atuação.
-- Seção de experiência profissional.
-- Habilidades organizadas por categorias.
-- Formação acadêmica, atividades e certificados.
-- Links para LinkedIn, GitHub e e-mail.
-- Navegação por seções com rolagem suave.
-- Menu adaptado para dispositivos móveis.
-- Animações ativadas conforme os elementos aparecem na tela.
-- Layout responsivo para desktop, tablet e celular.
+```php
+Route::get('/', PortfolioController::class)->name('portfolio');
+```
 
-## Como a aplicação funciona
+A rota possui o nome `portfolio`, que também é utilizado pelos testes de
+funcionalidade para acessar a página sem depender diretamente da URL.
 
-Ao acessar a página inicial, a requisição percorre o seguinte fluxo:
+### Controller
+
+O `PortfolioController` foi implementado como um controller invocável. Como a
+aplicação possui uma única página, não foi necessário criar vários métodos de
+ação.
+
+```php
+class PortfolioController extends Controller
+{
+    public function __invoke(): View
+    {
+        return view('portfolio', config('portfolio'));
+    }
+}
+```
+
+O método `__invoke()` carrega os dados de `config/portfolio.php` e os envia para
+a view `portfolio`.
+
+### Configuração dos dados
+
+As habilidades, certificações e atividades acadêmicas ficam centralizadas em
+`config/portfolio.php`.
+
+Esse arquivo retorna um array associativo que é carregado pelo helper
+`config('portfolio')`. As chaves do array são disponibilizadas como variáveis na
+view Blade.
+
+Essa organização mantém o conteúdo estruturado fora do HTML e permite atualizar
+os dados sem alterar a marcação da página. Como o portfólio não possui conteúdo
+dinâmico cadastrado por usuários, não foi necessário adicionar banco de dados,
+Models ou operações de CRUD.
+
+### Blade
+
+A interface está em `resources/views/portfolio.blade.php`. A view utiliza os
+recursos do Blade para renderizar os dados recebidos do controller.
+
+As diretivas `@foreach` são usadas para montar as listas de habilidades,
+certificados e atividades. O Blade também aplica o escape automático com
+`{{ }}`, evitando que valores sejam inseridos no HTML sem tratamento.
+
+### Assets com Vite
+
+Os arquivos `resources/css/app.css` e `resources/js/app.js` são carregados na
+view através da diretiva `@vite`.
+
+```php
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+```
+
+O Vite processa e versiona os assets para produção. O CSS utiliza Tailwind como
+parte do pipeline de build, além de regras personalizadas para o layout,
+responsividade e animações. O JavaScript controla o menu mobile, o estado visual
+do cabeçalho e a exibição progressiva das seções com `IntersectionObserver`.
+
+### Fluxo da requisição
+
+O fluxo principal da aplicação é:
 
 ```text
 Navegador
@@ -68,13 +119,15 @@ resources/views/portfolio.blade.php
 HTML enviado ao navegador
 ```
 
-1. A rota `/` recebe a requisição.
-2. O `PortfolioController` carrega os dados definidos em `config/portfolio.php`.
-3. Os dados são enviados para a view Blade.
-4. O Laravel renderiza a página e devolve o HTML ao navegador.
-5. Vite fornece os arquivos compilados de CSS e JavaScript.
+1. O servidor recebe uma requisição para `/`.
+2. O roteador do Laravel encontra a rota nomeada `portfolio`.
+3. O container da aplicação resolve e executa o `PortfolioController`.
+4. O controller carrega a configuração com `config('portfolio')`.
+5. Os dados são enviados para a view Blade.
+6. O Blade gera o HTML final.
+7. O Laravel devolve a resposta HTTP ao navegador.
 
-## Estrutura principal
+## Organização
 
 ```text
 2026-PORTFOLIO/
@@ -97,73 +150,58 @@ HTML enviado ao navegador
 └── README.md
 ```
 
-## Executando localmente
+## Qualidade
 
-### Pré-requisitos
+O projeto utiliza:
 
-- PHP 8.3 ou superior
-- Composer
-- Node.js
-- npm
+- **PHPUnit** para testes unitários e de funcionalidade;
+- **Laravel Pint** para padronização do código PHP;
+- **PHPStan com Larastan** para análise estática;
+- **Vite** para compilação e otimização dos assets.
 
-### Instalação
+Os testes de funcionalidade inicializam a aplicação Laravel e realizam
+requisições HTTP para a rota do portfólio. Eles verificam o status da resposta,
+os conteúdos principais e os links profissionais.
 
-```bash
-git clone https://github.com/emanusousa/2026-PORTFOLIO.git
-cd 2026-PORTFOLIO/portfolio
-composer install
-npm install
-cp .env.example .env
-php artisan key:generate
-npm run build
-```
+Os testes unitários validam isoladamente a estrutura de `config/portfolio.php`,
+garantindo que certificados e atividades mantenham os campos esperados.
 
-### Iniciando o projeto
+## Publicação
 
-```bash
-composer dev
-```
+A aplicação está hospedada no plano gratuito do **Alwaysdata**, utilizando um
+ambiente PHP compatível com os requisitos do Laravel 13.
 
-A aplicação ficará disponível em:
+O servidor web está configurado para utilizar como diretório raiz:
 
 ```text
-http://localhost:8000
+/home/portfolio-emanuel/www/2026-PORTFOLIO/portfolio/public
 ```
 
-## Comandos úteis
+Essa configuração mantém os arquivos internos do Laravel fora do acesso público.
+Somente o conteúdo de `public/`, incluindo `index.php`, `.htaccess`, ícones e
+assets compilados, pode ser acessado diretamente pelo navegador.
 
-```bash
-# Iniciar somente o servidor Laravel
-php artisan serve
+O arquivo `public/index.php` funciona como front controller da aplicação. Todas
+as requisições são direcionadas para esse ponto de entrada e encaminhadas ao
+roteador do Laravel pelas regras definidas em `public/.htaccess`.
 
-# Iniciar o Vite em desenvolvimento
-npm run dev
+No ambiente publicado, a aplicação utiliza configurações específicas de
+produção:
 
-# Gerar os arquivos otimizados para produção
-npm run build
+- `APP_ENV=production`;
+- `APP_DEBUG=false`;
+- sessões e cache armazenados em arquivos;
+- fila configurada para execução síncrona;
+- configurações e views armazenadas em cache pelo Laravel.
 
-# Executar os testes
-php artisan test
+As dependências PHP são instaladas com o Composer em modo de produção, sem os
+pacotes de desenvolvimento. Os assets são compilados localmente pelo Vite e o
+conteúdo gerado em `public/build` é enviado ao servidor. Dessa forma, o ambiente
+de hospedagem não precisa manter o Node.js nem a pasta `node_modules`.
 
-# Verificar a formatação do código
-vendor/bin/pint --test
-
-# Executar a análise estática
-vendor/bin/phpstan analyse
-
-# Listar as rotas da aplicação
-php artisan route:list
-```
-
-## Testes
-
-O projeto possui testes automatizados para verificar:
-
-- disponibilidade da página;
-- conteúdo profissional essencial;
-- links de contato e redes profissionais;
-- estrutura das habilidades, atividades e certificações;
-- consistência dos dados enviados para a view.
+Como o portfólio não utiliza banco de dados, uploads ou processamento em segundo
+plano, a infraestrutura publicada permanece simples e com baixo consumo de
+recursos.
 
 ## Autor
 
