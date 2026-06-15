@@ -126,26 +126,25 @@
                     <h2>Tecnologia, para mim, é uma forma de construir junto.</h2>
                     <div class="about-copy">
                         <p>
-                            Tenho no trabalho em equipe uma das minhas principais fortalezas. Gosto de ouvir,
-                            compartilhar conhecimento e criar um ambiente onde as pessoas possam evoluir enquanto
-                            transformamos desafios em soluções.
+                            O trabalho em equipe é uma das minhas principais fortalezas. Gosto de ouvir,
+                            compartilhar ideias e aprender com diferentes perspectivas, construindo soluções em
+                            conjunto e contribuindo para um ambiente de evolução mútua.
                         </p>
                         <p>
-                            Minha experiência com desenvolvimento de pessoas começou também fora das empresas:
-                            fui professor de informática básica para crianças em uma ONG, aproximando tecnologia
-                            e educação de forma simples, acolhedora e prática.
+                            Também fui professor de informática básica para crianças em uma ONG, experiência que
+                            aproximou tecnologia e educação de forma simples, acolhedora e prática.
                         </p>
                         <p>
-                            Na CESAR School, também ministrei monitorias de <strong>Banco de Dados</strong> e
-                            <strong>Programação Orientada a Objetos</strong>. Ao revisar os conteúdos e buscar
-                            diferentes formas de explicá-los, aprofundei meu próprio conhecimento enquanto
-                            ajudava novos estudantes a compreender os fundamentos e ganhar confiança.
+                            Na CESAR School, ministrei monitorias de <strong>Banco de Dados</strong> e
+                            <strong>Programação Orientada a Objetos</strong>. Ao revisar os conteúdos e trocar
+                            experiências com outros estudantes, aprofundei meus conhecimentos enquanto contribuía
+                            para o aprendizado coletivo.
                         </p>
                         <p>
-                            Pela CESAR School, participei por dois anos consecutivos como monitor da
-                            <strong>Maratona de Inovação</strong>, no festival Rec’n’Play, em Recife. Nessa
-                            experiência, ajudei adolescentes a investigar problemas reais, trabalhar em equipe
-                            e transformar ideias em projetos.
+                            Também participei por dois anos consecutivos como monitor da
+                            <strong>Maratona de Inovação</strong>, durante o festival Rec’n’Play, em Recife. Nessa
+                            experiência, acompanhei adolescentes na investigação de problemas reais, colaborando
+                            com as equipes na construção e no desenvolvimento de suas ideias.
                         </p>
                     </div>
                     <div class="about-values">
