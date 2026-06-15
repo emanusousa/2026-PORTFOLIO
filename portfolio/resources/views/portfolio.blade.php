@@ -24,6 +24,7 @@
             <a href="#sobre">Sobre</a>
             <a href="#experiencia">Experiência</a>
             <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
             <a href="#formacao">Formação</a>
             <a class="nav-cta" href="#contato">Vamos conversar</a>
         </nav>
@@ -51,7 +52,6 @@
                                 <path d="M5.37 3.5A2.18 2.18 0 1 1 5.36 7.86 2.18 2.18 0 0 1 5.37 3.5ZM3.5 9.5h3.74v11H3.5v-11Zm6.12 0h3.58V11h.05c.5-.94 1.72-1.94 3.54-1.94 3.79 0 4.49 2.5 4.49 5.74v5.7h-3.73v-5.05c0-1.2-.02-2.76-1.68-2.76-1.68 0-1.94 1.32-1.94 2.67v5.14H9.62v-11Z"/>
                             </svg>
                             Conecte-se comigo
-                            <span>↗</span>
                         </a>
                         <a
                             class="button button-github"
@@ -106,22 +106,97 @@
                 <span class="section-number">01</span>
                 <p>Sobre mim</p>
             </div>
-            <div class="about-grid">
-                <h2 class="reveal">Tecnologia com propósito, colaboração e atenção aos detalhes.</h2>
-                <div class="about-copy reveal">
-                    <p>
-                        Atuo de ponta a ponta no desenvolvimento de soluções digitais para um cliente global,
-                        passando por banco de dados, regras de negócio, APIs e interfaces.
-                    </p>
-                    <p>
-                        Gosto de transformar problemas complexos em experiências simples, sustentáveis e fáceis
-                        de evoluir. Aprendizado contínuo e trabalho em equipe fazem parte do meu processo.
-                    </p>
-                    <div class="quick-facts">
-                        <div><strong>1+ ano</strong><span>Experiência profissional</span></div>
-                        <div><strong>B2</strong><span>Inglês intermediário avançado</span></div>
+            <div class="about-story">
+                <figure class="about-portrait reveal">
+                    <img
+                        src="/images/about/emanuel-perfil.jpg"
+                        alt="Retrato de Emanuel Eduardo"
+                        width="900"
+                        height="900"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        <span>Emanuel Eduardo</span>
+                        <small>Desenvolvedor & educador</small>
+                    </figcaption>
+                </figure>
+
+                <div class="about-content reveal">
+                    <p class="about-kicker">Pessoas também fazem parte da solução.</p>
+                    <h2>Tecnologia, para mim, é uma forma de construir junto.</h2>
+                    <div class="about-copy">
+                        <p>
+                            Tenho no trabalho em equipe uma das minhas principais fortalezas. Gosto de ouvir,
+                            compartilhar conhecimento e criar um ambiente onde as pessoas possam evoluir enquanto
+                            transformamos desafios em soluções.
+                        </p>
+                        <p>
+                            Minha experiência com desenvolvimento de pessoas começou também fora das empresas:
+                            fui professor de informática básica para crianças em uma ONG, aproximando tecnologia
+                            e educação de forma simples, acolhedora e prática.
+                        </p>
+                        <p>
+                            Na CESAR School, também ministrei monitorias de <strong>Banco de Dados</strong> e
+                            <strong>Programação Orientada a Objetos</strong>. Ao revisar os conteúdos e buscar
+                            diferentes formas de explicá-los, aprofundei meu próprio conhecimento enquanto
+                            ajudava novos estudantes a compreender os fundamentos e ganhar confiança.
+                        </p>
+                        <p>
+                            Pela CESAR School, participei por dois anos consecutivos como monitor da
+                            <strong>Maratona de Inovação</strong>, no festival Rec’n’Play, em Recife. Nessa
+                            experiência, ajudei adolescentes a investigar problemas reais, trabalhar em equipe
+                            e transformar ideias em projetos.
+                        </p>
+                    </div>
+                    <div class="about-values">
+                        <span>Colaboração</span>
+                        <span>Desenvolvimento de pessoas</span>
+                        <span>Educação</span>
+                        <span>Inovação</span>
                     </div>
                 </div>
+            </div>
+
+            <div class="about-gallery">
+                <figure class="about-moment about-moment-wide reveal">
+                    <img
+                        src="/images/about/recnplay-equipe.jpg"
+                        alt="Emanuel com participantes e monitores da Maratona de Inovação no Rec’n’Play"
+                        width="1400"
+                        height="1050"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        <span>Maratona de Inovação — Rec’n’Play</span>
+                        <small>Dois anos ajudando adolescentes a criar soluções para problemas reais.</small>
+                    </figcaption>
+                </figure>
+                <figure class="about-moment reveal">
+                    <img
+                        src="/images/about/aula-ong.jpg"
+                        alt="Emanuel durante uma aula de informática básica para crianças em uma ONG"
+                        width="1400"
+                        height="777"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        <span>Educação que aproxima</span>
+                        <small>Ensino de informática básica para crianças em uma ONG.</small>
+                    </figcaption>
+                </figure>
+                <figure class="about-moment about-moment-monitoring reveal">
+                    <img
+                        src="/images/about/monitoria-poo.jpg"
+                        alt="Emanuel ministrando uma monitoria online de Programação Orientada a Objetos"
+                        width="1400"
+                        height="759"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        <span>Monitorias na CESAR School</span>
+                        <small>Banco de Dados e POO ensinados com revisão, prática e troca de conhecimento.</small>
+                    </figcaption>
+                </figure>
             </div>
         </section>
 
@@ -178,9 +253,57 @@
             </div>
         </section>
 
-        <section id="formacao" class="section education">
+        <section id="projetos" class="section projects-section">
             <div class="section-heading reveal">
                 <span class="section-number">04</span>
+                <p>Projetos pessoais</p>
+            </div>
+            <div class="projects-intro reveal">
+                <h2>Projetos onde transformei estudo em soluções práticas.</h2>
+                <p>
+                    Experimentos e projetos acadêmicos que exploram desenvolvimento web,
+                    arquitetura de software, algoritmos, dados e aprendizado de máquina.
+                </p>
+            </div>
+            <div class="projects-grid">
+                @foreach ($projects as $project)
+                    <article class="project-card reveal">
+                        <div class="project-card-top">
+                            <span class="project-number">0{{ $loop->iteration }}</span>
+                            <a
+                                class="project-link"
+                                href="{{ $project['repository'] }}"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Ver repositório do projeto {{ $project['name'] }}"
+                            >
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49v-1.91c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.66.35-1.12.64-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.95a9.3 9.3 0 0 1 2.5.34c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.89v2.81c0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
+                                </svg>
+                                <span>Ver código ↗</span>
+                            </a>
+                        </div>
+                        <p class="project-subtitle">{{ $project['subtitle'] }}</p>
+                        <h3>{{ $project['name'] }}</h3>
+                        <p class="project-description">{{ $project['description'] }}</p>
+                        <ul class="project-highlights">
+                            @foreach ($project['highlights'] as $highlight)
+                                <li>{{ $highlight }}</li>
+                            @endforeach
+                        </ul>
+                        <div class="project-technologies">
+                            @foreach ($project['technologies'] as $technology)
+                                <span>{{ $technology }}</span>
+                            @endforeach
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </section>
+
+        <section id="formacao" class="section education">
+            <div class="section-heading reveal">
+                <span class="section-number">05</span>
                 <p>Formação & desenvolvimento</p>
             </div>
             <div class="education-grid">
@@ -223,6 +346,61 @@
                 <p>Estou sempre aberto a boas conversas sobre tecnologia, produtos e novas oportunidades.</p>
                 <a href="mailto:emanueledusousa@gmail.com">emanueledusousa@gmail.com <span>↗</span></a>
             </div>
+        </section>
+
+        <section class="pixel-cta" aria-labelledby="pixel-title">
+            <div class="pixel-sky" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="pixel-scene reveal">
+                <div class="pixel-character-wrap" aria-hidden="true">
+                    <div class="pixel-speech">Ei! Ainda não acabou...</div>
+                    <div class="pixel-character">
+                        <div class="pixel-hair"></div>
+                        <div class="pixel-head">
+                            <span class="pixel-ear pixel-ear-left"></span>
+                            <span class="pixel-ear pixel-ear-right"></span>
+                            <span class="pixel-eye pixel-eye-left"></span>
+                            <span class="pixel-eye pixel-eye-right"></span>
+                            <span class="pixel-smile"></span>
+                        </div>
+                        <div class="pixel-neck"></div>
+                        <div class="pixel-body">
+                            <span class="pixel-shirt-detail">&lt;/&gt;</span>
+                        </div>
+                        <span class="pixel-arm pixel-arm-left"></span>
+                        <span class="pixel-arm pixel-arm-right"></span>
+                        <span class="pixel-hand"></span>
+                        <span class="pixel-leg pixel-leg-left"></span>
+                        <span class="pixel-leg pixel-leg-right"></span>
+                        <span class="pixel-shoe pixel-shoe-left"></span>
+                        <span class="pixel-shoe pixel-shoe-right"></span>
+                    </div>
+                </div>
+
+                <div class="pixel-copy">
+                    <p class="pixel-label">FASE BÔNUS DESBLOQUEADA</p>
+                    <h2 id="pixel-title">Você chegou até o final. Que tal conhecer o código?</h2>
+                    <p>
+                        Este portfólio também é um projeto de estudo em PHP e Laravel.
+                        No repositório você pode explorar a estrutura, os testes e cada detalhe da construção.
+                    </p>
+                    <a
+                        class="pixel-button"
+                        href="https://github.com/emanusousa/2026-PORTFOLIO"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49v-1.91c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.66.35-1.12.64-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.95a9.3 9.3 0 0 1 2.5.34c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.89v2.81c0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
+                        </svg>
+                        ABRIR REPOSITÓRIO
+                        <span>+100 XP</span>
+                    </a>
+                    <small>Pressione para continuar a aventura ↗</small>
+                </div>
+            </div>
+            <div class="pixel-ground" aria-hidden="true"></div>
         </section>
     </main>
 
